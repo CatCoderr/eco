@@ -37,14 +37,14 @@ class MySQLDataHandler(
             SchemaUtils.create(Players)
         }
 
-        // Get Exposed to shut the hell up
-        exposedLogger::class.java.getDeclaredField("logger").apply { isAccessible = true }
-            .apply {
-                get(exposedLogger).apply {
-                    this.javaClass.getDeclaredMethod("setLevel", Level::class.java)
-                        .invoke(this, Level.OFF)
-                }
-            }
+//        // Get Exposed to shut the hell up
+//        exposedLogger::class.java.getDeclaredField("logger").apply { isAccessible = true }
+//            .apply {
+//                get(exposedLogger).apply {
+//                    this.javaClass.getDeclaredMethod("setLevel", Level::class.java)
+//                        .invoke(this, Level.OFF)
+//                }
+//            }
     }
 
     override fun updateKeys() {
